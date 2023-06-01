@@ -8,11 +8,9 @@ pipeline {
             }
         }
     }
-      stage {
         stage('Build'){
             steps{
                 sh 'mvn -B package'
             }
         }
     }
-}
