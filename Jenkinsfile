@@ -7,10 +7,13 @@ pipeline {
                 echo "Hola mami"
             }
         }
-    }
-        stage('Build'){
-            steps{
+    
+      stage('Build'){
+            steps {
                 sh 'mvn -B package'
             }
         }
+    
+    }
+      
     }
