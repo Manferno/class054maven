@@ -84,12 +84,17 @@ pipeline {
             }
         }
 
-         post {
+       
+      
+    } 
+    //Fin
+
+      post {
         always{
             slackSend( channel: "#ManuelCruces", token: "ffx7Fj80ByIBWTpKm7bj3M2L", color: "good", message: "Prueba Grupo 4")
                            
         }
-  }
+             }
     post {
         always {
             junit (
@@ -99,7 +104,4 @@ pipeline {
         }
     
     }
-      
-    }
-    //Fin
 }
