@@ -83,6 +83,20 @@ pipeline {
                 }
             }
         }
+
+         post {
+        always{
+            slackSend( channel: "#grupo4", token: "ffx7Fj80ByIBWTpKm7bj3M2L", color: "good", message: "Prueba Grupo 4")
+                           
+        }
+  }
+    post {
+        always {
+            junit (
+                allowEmptyResults: true,
+                testResults: '*/test-reports/.xml'
+            )           
+        }
     
     }
       
