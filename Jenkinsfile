@@ -35,7 +35,7 @@ pipeline {
             }
             steps {
                 echo "Acá comienza Sonnar"
-                withSonarQubeEnv(credentialsId: 'Token del Sonar-LTS', installationName: 'SonarQube') {
+                withSonarQubeEnv(credentialsId: 'Token-Sonar-2', installationName: 'SonarQube') {
                     sh '''$SCANNER_HOME/bin/sonar-scanner \
                     -Dsonar.projectKey=Maven-Pipeline \
                     -Dsonar.projectName=Maven-Pipeline \
