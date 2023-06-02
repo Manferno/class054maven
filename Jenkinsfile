@@ -84,7 +84,7 @@ pipeline {
             }
         }
 
-         post{
+        post{
         always {
             junit (
                 allowEmptyResults: true,
@@ -93,16 +93,16 @@ pipeline {
         }
     
      }
+     
     } 
-    //Fin
-
-    /*post {
+    
+    post {
         always{
-            slackSend( channel: "#ManuelCruces", token: "ffx7Fj80ByIBWTpKm7bj3M2L", color: "good", message: "Prueba Grupo 4")
+            slackSend( channel: "#grupo4", token: "zrR2KrxeHjCxLqKIxXg2QfDf", color: "good", message: "Test-Pipeline")
                            
         }
              }
 
-             */
+             
    
 }
