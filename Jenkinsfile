@@ -34,7 +34,8 @@ pipeline {
                 SCANNER_HOME = tool 'SonarQube Scanner installer'
             }
             steps {
-                withSonarQubeEnv(credentialsId: 'Sonar-To-Jenkins-Remote', installationName: 'SonarQube') {
+                echo "Acá comienza Sonnar"
+                withSonarQubeEnv(credentialsId: 'Token del Sonar-LTS', installationName: 'SonarQube') {
                     sh '''$SCANNER_HOME/bin/sonar-scanner \
                     -Dsonar.projectKey=Maven-Pipeline \
                     -Dsonar.projectName=Maven-Pipeline \
@@ -48,6 +49,7 @@ pipeline {
 
         stage("Publish to Local Nexus Repository Manager") {
             steps {
+                echo "Acá comienza Nexus"
                 script {
                     pom = readMavenPom file: "pom.xml";
                     filesByGlob = findFiles(glob: "target/*.${pom.packaging}");
