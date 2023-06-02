@@ -34,7 +34,7 @@ pipeline {
                 SCANNER_HOME = tool 'SonarQube Scanner installer'
             }
             steps {
-                withSonarQubeEnv(credentialsId: 'SonarRemote', installationName: 'SonarQube') {
+                withSonarQubeEnv(credentialsId: 'Sonar-To-Jenkins-Remote', installationName: 'SonarQube') {
                     sh '''$SCANNER_HOME/bin/sonar-scanner \
                     -Dsonar.projectKey=Maven-Pipeline \
                     -Dsonar.projectName=Maven-Pipeline \
