@@ -93,15 +93,15 @@ pipeline {
         }
     
      }
-     
-    } 
-    
-    post {
+      post {
         always{
             slackSend( channel: "#grupo4", token: "zrR2KrxeHjCxLqKIxXg2QfDf", color: "good", message: "Test-Pipeline")
                            
         }
              }
+    } 
+    
+   
 
              
    
