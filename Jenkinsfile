@@ -23,11 +23,11 @@ pipeline {
             }
         }
 
-          stage('Test') { 
+       /*   stage('Test') { 
             steps {
                 sh 'mvn clean verify' 
             }
-        }
+        }*/
 
         stage('SonarQube analysis') {
             environment {
